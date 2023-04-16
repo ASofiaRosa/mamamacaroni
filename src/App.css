@@ -1,38 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
 .App {
-  text-align: center;
+  font-family: "Gloock", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  font-family: "Mr De Haviland", cursive;
+  font-size: 1.2rem;
+  color: rgb(158, 33, 102);
+  background-color: #f9d0e4ff;
+  padding: 1rem 2rem;
+}
+.navbar h1 {
+  grid-column: 2/3;
+  margin: auto;
+}
+.navbarRight {
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar button {
+  padding: 0.5rem;
+  background-color: rgb(158, 33, 102);
+  color: white;
+  font-family: "Gloock", serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border-radius: 2rem;
+  border-color: rgb(158, 33, 102);
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar button:hover {
+  background-color: white;
+  color: rgb(158, 33, 102);
+}
+
+.cartCount {
+  font-family: "Gloock", serif;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  top: 3rem;
+  right: 1.2rem;
+}
+
+.HeroContainer {
+  height: 90vh;
+  background-image: url("https://res.cloudinary.com/dup0sa10r/image/upload/v1681308765/mamamacaroni/macarons_d6ohqt.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeroTextContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+  padding: 8rem;
+  color: rgb(244, 136, 157);
+  width: 38%;
+  text-shadow: -5px 5px #8a6c8825;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.HeroTextContainer h2 {
+  padding-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.HeroTextContainer button {
+  padding: 1rem;
+  color: #f390a4ff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(251, 238, 238);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-color: rgba(236, 202, 79, 0.652);
+  font-family: "Gloock", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+.HeroTextContainer button:hover {
+  background-color: #f390a4ff;
+  color: rgb(251, 238, 238);
+}
+
+.AboutContainer {
+  height: 30rem;
 }
