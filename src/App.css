@@ -4,6 +4,8 @@
   font-family: "Gloock", serif;
 }
 
+/* Start Navbar Styling */
+
 .navbar {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
@@ -25,7 +27,8 @@
   gap: 1rem;
 }
 
-.navbar button {
+.navbar button,
+.submit {
   padding: 0.5rem;
   background-color: rgb(158, 33, 102);
   color: white;
@@ -53,6 +56,10 @@
   top: 3rem;
   right: 1.2rem;
 }
+
+/* End Navabr Styling */
+
+/* Start Hero Section Styling */
 
 .HeroContainer {
   height: 90vh;
@@ -105,6 +112,63 @@
   color: rgb(251, 238, 238);
 }
 
-.AboutContainer {
-  height: 30rem;
+/* End Hero Section Styling */
+
+/* Start Authentication Styling */
+
+.authentication {
+  display: flex;
 }
+
+.authenticationImage {
+  width: 50%;
+  overflow: hidden;
+}
+
+.authenticationImage img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.authenticationInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  gap: 3rem;
+  width: 30%;
+}
+
+.email,
+.password,
+.name {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+.email input,
+.password input,
+.name input {
+  height: 2rem;
+  border-radius: 3%;
+  border-color: rgb(158, 33, 102);
+  border-width: 0.2rem;
+}
+
+.buttonAndRedirect {
+  margin-top: 1rem;
+}
+
+.submit {
+  width: 100%;
+  padding: 0.8rem 0;
+}
+
+.signUp {
+  color: rgb(158, 33, 102);
+  margin-left: 0.3rem;
+}
+
+/* End Authentication Styling */
