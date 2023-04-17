@@ -6,11 +6,10 @@ export default function Hero() {
     <div className="HeroContainer">
       <div className="HeroTextContainer">
         <h2>Our freshly baked macarons are waiting for you</h2>
-        <nav>
-          <NavLink to={"/order"}>
-            <button>Order Now</button>
-          </NavLink>
-        </nav>
+
+        <NavLink to={"/order"}>
+          <button>Order Now</button>
+        </NavLink>
       </div>
     </div>
   );
