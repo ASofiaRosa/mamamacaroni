@@ -15,12 +15,12 @@ export default function Authentication() {
         <div className="email">
           <label>Email:</label>
           <br></br>
-          <input type="text" id="email" name="email"></input>
+          <input type="email" id="email" name="email"></input>
         </div>
         <div className="password">
           <label>Password:</label>
           <br></br>
-          <input type="text" id="password" name="password"></input>
+          <input type="password" id="password" name="password"></input>
         </div>
         <div className="buttonAndRedirect">
           <input type="submit" value="Submit" className="submit"></input>
