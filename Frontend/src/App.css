@@ -118,6 +118,7 @@
 
 .authentication {
   display: flex;
+  height: 93vh;
 }
 
 .authenticationImage {
