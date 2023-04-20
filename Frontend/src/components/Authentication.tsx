@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 export default function Authentication() {
+  const login = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const submit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    login?.login(email, password);
+  };
+
   return (
     <div className="authentication">
       <div className="authenticationImage">
@@ -10,17 +20,31 @@ export default function Authentication() {
           alt="macarons box"
         ></img>
       </div>
-      <div className="authenticationInput">
+      <form className="authenticationInput" onSubmit={submit}>
         <h2>Log in</h2>
         <div className="email">
           <label>Email:</label>
           <br></br>
-          <input type="email" id="email" name="email"></input>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setEmail(e.target.value);
+            }}
+          ></input>
         </div>
         <div className="password">
           <label>Password:</label>
           <br></br>
-          <input type="password" id="password" name="password"></input>
+          <input
+            type="text"
+            id="password"
+            name="password"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setPassword(e.target.value);
+            }}
+          ></input>
         </div>
         <div className="buttonAndRedirect">
           <input type="submit" value="Submit" className="submit"></input>
@@ -31,7 +55,7 @@ export default function Authentication() {
             </NavLink>
           </h5>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

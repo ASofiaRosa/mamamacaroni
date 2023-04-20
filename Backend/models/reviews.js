@@ -5,15 +5,15 @@ const reviewSchema = new Schema(
     title: { type: String, required: true },
     description: { type: String },
     stars: { type: Number, required: true },
-    author: { type: Types.ObjectId, ref: "User" },
+    author: { type: Types.ObjectId, ref: "User", required: true },
   },
   {
     timestamps: true,
   }
 );
 
-const User = model("Review", reviewSchema);
+const Review = model("Review", reviewSchema);
 
 module.exports = {
-  User,
+  Review,
 };
